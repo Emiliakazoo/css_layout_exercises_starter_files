@@ -1,0 +1,69 @@
+
+div {
+	width:800px;
+	margin:0 auto;
+	font-size:0;
+	border:1px solid black;
+}
+
+span {
+	display:inline-block;
+}
+span:not(:last-child){
+	border-right:1px solid black;
+}
+
+.top {
+	margin-top:50px;
+}
+.top span {
+	width:50%;
+	height:200px;
+	background-color:green;
+}
+.top span:last-child {
+	background-color:blue;
+}
+
+.bottom {
+	border-top:none;
+}
+.bottom span {
+	width:33.33%;
+	height:300px;
+	background-color:silver;
+}
+.bottom span:nth-child(2) {
+	background-color:black;
+}
+
+.bottom span:last-child {
+	background-color:orange;
+}
+
+/*for smaller screens, because it was bugging me*/
+
+@media screen and (max-width:768px){
+	div {
+		width:400px;
+		display:-webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display:flex;
+		-webkit-flex-direction:column;
+		flex-direction:column;
+		margin:0 auto;
+	}
+
+	.bottom {
+		margin-bottom:50px;
+	}
+	.top span, .bottom span {
+		width:100%;
+		border-right:0;
+	}
+	span:not(:last-child) {
+		border-bottom:1px solid black;
+	}
+}
+
