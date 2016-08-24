@@ -1,4 +1,7 @@
-
+* {
+	box-sizing:border-box;
+	
+}
 div {
 	width:800px;
 	margin:0 auto;
